@@ -1,0 +1,14 @@
+header {
+    background-color: lightcoral;
+    padding: 2rem;
+    word-spacing: 10px;
+    letter-spacing: 20px;;
+}
+
+aside {
+    background: lightgrey;
+}
+
+main {
+    background-color: azure
+}
