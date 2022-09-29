@@ -1,3 +1,7 @@
+body {
+    padding:0px;
+    margin:0px;
+}
 header {
     background-color: lightcoral;
     padding: 2rem;
@@ -10,5 +14,60 @@ aside {
 }
 
 main {
-    background-color: azure
+    background-color: azure;
+    padding:0px;
+}
+ul {
+list-style-type: none;   
+padding: 5px;
+padding-top: 30px;
+}
+h2 {
+    font-size: 8vh;
+}
+h3 {
+    font-size: 7vh;
+}
+.profile {
+    padding: 20px 70px; 
+    border: 1px solid black;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.header {
+    background-color: #0275d8;
+    padding: 20px;
+    color: white;
+}
+.information-table {
+    background: white;
+    margin-top: 25px;
+}
+.border-line {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px;
+    font-size: 2rem;
+}
+.head-element {
+    padding: 10px;
+    
+}
+li {
+    margin: 50px 0px;
+}
+
+.main-section {
+    margin: 0px;
+    padding: 0px;
+}
+.icon {
+    margin-right: 30px;
+}
+.sidebar-link {
+    width:80%;
 }
