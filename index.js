@@ -76,6 +76,12 @@ inquirer
                     message: 'What is the email of engineer?'
                 },
                 {
+                    type: 'list',
+                    name: 'gender',
+                    message: 'What is the gender of engineer?',
+                    choices: ['female','male']
+                },
+                {
                     type: 'input',
                     name: 'github',
                     message: 'What is the github username of engineer?'
