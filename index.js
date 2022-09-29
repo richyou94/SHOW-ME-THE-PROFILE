@@ -4,6 +4,11 @@ const Intern = require('./lib/Intern')
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const template = require('./src/template');
+
+const teamMembers = [];
+const idList = [];
+
 inquirer
     .prompt([
         {
@@ -29,7 +34,8 @@ inquirer
     ])
     .then((answers) => {
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
-        console.log(manager);
+        teamMembers.push(manager)
+        idList.push(answers.id)
         selectTeam();
     })
 
@@ -52,7 +58,7 @@ inquirer
                         return addIntern();
                     break;
                     default:
-                        return console.log('Done')
+                        return generateHTML();
                 }
             })
     }
@@ -89,7 +95,8 @@ inquirer
             ])
             .then((answer) => {
                 const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github);
-                console.log(engineer);
+                teamMembers.push(engineer);
+                idList.push(answer.id);
                 selectTeam();
             })
     }
@@ -120,7 +127,14 @@ inquirer
             ])
             .then((answer) => {
                 const intern = new Intern(answer.name, answer.id, answer.email, answer.school);
-                console.log(intern);
+                teamMembers.push(intern);
+                idList.push(answer.id);
                 selectTeam();
             })
+    }
+
+
+    function generateHTML() {
+        const htmlContent = template(teamMembers)
+        fs.writeFileSync('./dist/profile.html', htmlContent, 'utf-8');
     }
