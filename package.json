@@ -4,7 +4,7 @@
   "description": "Pull out the team's profile data into webpage",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --color test/*",
+    "test": "jest",
     "start": "node index.js"
   },
   "repository": {
