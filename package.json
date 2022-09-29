@@ -1,0 +1,27 @@
+{
+  "name": "show-me-the-profile",
+  "version": "1.0.0",
+  "description": "Pull out the team's profile data into webpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --color test/*",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YichanYouRichard/SHOW-ME-THE-PROFILE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YichanYouRichard/SHOW-ME-THE-PROFILE/issues"
+  },
+  "homepage": "https://github.com/YichanYouRichard/SHOW-ME-THE-PROFILE#readme",
+  "dependencies": {
+    "inquirer": "8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
