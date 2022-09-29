@@ -51,7 +51,7 @@ describe('Employee', () => {
         it("should get id using getId() function", () => {
             const testId = 1;
             const testEmployee = new Employee('Richard', testId, 'email');
-            expect(testEmployee.getID()).toBe(testId);
+            expect(testEmployee.getId()).toBe(testId);
         });
 
         it("should get email using getEmail() function", () => {

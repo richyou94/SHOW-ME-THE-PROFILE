@@ -13,7 +13,7 @@ const generateTeam = team => {
                     </div>
                     <div class="information-table">
                         <h4 class="border-line">ID: ${manager.getId()}</h4>
-                        <h4 class="border-line">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></h4>
+                        <h4 class="border-line">Email: <a href="mailto:${manager.getEmail()}" target="_blank" >${manager.getEmail()}</a></h4>
                         <h4 class="border-line">Office Number: ${manager.getOfficeNumber()}</h4>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const generateTeam = team => {
                     </div>
                     <div class="information-table">
                         <h4 class="border-line">ID: ${engineer.getId()}</h4>
-                        <h4 class="border-line">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></h4>
+                        <h4 class="border-line">Email: <a href="mailto:${engineer.getEmail()}" target="_blank" >${engineer.getEmail()}</a></h4>
                         <h4 class="border-line">GitHub: <a href="github.com/${engineer.getGithub()}" target="_blank" >${engineer.getGithub()}</a></h4>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const generateTeam = team => {
                     </div>
                     <div class="information-table">
                         <h4 class="border-line">ID: ${intern.getId()}</h4>
-                        <h4 class="border-line">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></h4>
+                        <h4 class="border-line">Email: <a href="mailto:${intern.getEmail()}" target="_blank" >${intern.getEmail()}</a></h4>
                         <h4 class="border-line">School: ${intern.getSchool()}</h4>
                     </div>
                 </div>
@@ -101,16 +101,7 @@ module.exports = team => {
             <h1>SHOW ME THE PROFILES!</h1>
         </header>
         <div class="row container-fluid whole-container main-section">
-            <aside class="col-md-2 container sidebar text-center">
-                <ul>
-                    <li><button type="button" class="btn btn-primary sidebar-link" href="#">JARED</button></li>
-                    <li><button type="button" class="btn btn-primary sidebar-link" href="#">ALEC</button></li>
-                    <li><button type="button" class="btn btn-primary sidebar-link" href="#">GRACE</button></li>
-                    <li><button type="button" class="btn btn-primary sidebar-link" href="#">TAMMER</button></li>
-                    <li><button type="button" class="btn btn-primary sidebar-link" href="#">JOHN</button></li>
-                </ul>
-            </aside>
-            <main class="col-md-10 container-fluid">
+            <main class="col container-fluid">
                 ${generateTeam(team)}
             </main>
         </div>

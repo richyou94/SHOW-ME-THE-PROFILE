@@ -94,7 +94,7 @@ inquirer
                 }
             ])
             .then((answer) => {
-                const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github);
+                const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github, answer.gender);
                 teamMembers.push(engineer);
                 idList.push(answer.id);
                 selectTeam();
@@ -120,13 +120,19 @@ inquirer
                     message: 'What is the email of intern?'
                 },
                 {
+                    type: 'list',
+                    name: 'gender',
+                    message: 'Choose the gender of this intern',
+                    choices: ['male','female']
+                },
+                {
                     type: 'input',
                     name: 'school',
                     message: 'What is the school of intern?'
                 }
             ])
             .then((answer) => {
-                const intern = new Intern(answer.name, answer.id, answer.email, answer.school);
+                const intern = new Intern(answer.name, answer.id, answer.email, answer.school, answer.gender);
                 teamMembers.push(intern);
                 idList.push(answer.id);
                 selectTeam();
